@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmho8hv4bwk0t"]
+
+[ext_resource type="Script" path="res://letter_scroll.gd" id="1_t21ms"]
+[ext_resource type="Script" path="res://letter_contents.gd" id="2_frq3v"]
+
+[sub_resource type="Theme" id="Theme_ls2om"]
+
+[node name="LetterScroll" type="Node2D"]
+script = ExtResource("1_t21ms")
+
+[node name="LetterContents" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_right = 793.0
+offset_bottom = 70.0
+color = Color(0.65, 0.5252, 0.442, 1)
+script = ExtResource("2_frq3v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LetterContents"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 24.0
+offset_right = 775.0
+offset_bottom = 51.0
+theme = SubResource("Theme_ls2om")
+bbcode_enabled = true
+text = "Julie d'Aubigny, AKA La Maupin, was an expert duelist and opera singer who garnered as much fame from her scandalous affairs as she did from her performances. She went on the run from the law with an assistant fencing master, posed as postulant to break a female lover out of a convent using the dead body of a nun as a prop in the scheme, and once dueled three men in a row who challenged her after she kissed a woman at a ball. She defeated, and perhaps killed, all three of them. She would beat any man who threatened her or her fellow opera stars, and apparently had extraordinary powers of memory, as she could memorize an opera script in rapid order."

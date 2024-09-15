@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://x01gco3o4wph"]
+
+[ext_resource type="PackedScene" uid="uid://78uko0txto53" path="res://player.tscn" id="1_nhbjr"]
+[ext_resource type="PackedScene" uid="uid://bmho8hv4bwk0t" path="res://letter_scroll.tscn" id="2_rcax5"]
+[ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://trees/pine_tree.png" id="3_pn1pt"]
+
+[node name="Game" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1269.0
+offset_top = -1060.0
+offset_right = 3978.0
+offset_bottom = 2321.0
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_nhbjr")]
+position = Vector2(0, 2)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LetterScroll" parent="CanvasLayer" instance=ExtResource("2_rcax5")]
+position = Vector2(2, 2)
+
+[node name="PineTree" type="Sprite2D" parent="."]
+position = Vector2(-826, 342)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree2" type="Sprite2D" parent="."]
+position = Vector2(1233, -278)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree3" type="Sprite2D" parent="."]
+position = Vector2(-513, -534)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree4" type="Sprite2D" parent="."]
+position = Vector2(1237, 713)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree5" type="Sprite2D" parent="."]
+position = Vector2(1312, 160)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree6" type="Sprite2D" parent="."]
+position = Vector2(-313, 980)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree7" type="Sprite2D" parent="."]
+position = Vector2(731, -239)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree8" type="Sprite2D" parent="."]
+position = Vector2(-32, -267)
+texture = ExtResource("3_pn1pt")
+
+[node name="PineTree9" type="Sprite2D" parent="."]
+position = Vector2(1618, 189)
+texture = ExtResource("3_pn1pt")
