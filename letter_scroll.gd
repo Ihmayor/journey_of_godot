@@ -33,8 +33,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		elif event.keycode == KEY_ENTER:
 			input_char = "\n"
 		else:
+			print("invalid code")
 			return
 		input_char = handle_special_characters(input_char, has_shift)
+		print(input_char)
 		if current_letter_index == -1:
 			start_typing(input_char)
 			return
@@ -69,7 +71,7 @@ func handle_special_characters(character: String, has_shift: bool) -> String:
 	elif character == "\\":
 		character = "|"
 	elif character == "0":
-		character = "\\)"
+		character = ")"
 	elif character == "1":
 		character = "!"
 	elif character == "2":
@@ -87,5 +89,7 @@ func handle_special_characters(character: String, has_shift: bool) -> String:
 	elif character == "8":
 		character = "*"
 	elif character == "9":
-		character = "\\("
+		character = "("
+	elif character == "/":
+		character = "?"
 	return character

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://blrruhk75c6rk"]
 
 [ext_resource type="Script" path="res://pistol.gd" id="1_4kf7o"]
-[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://pistol/pistol.png" id="1_gje05"]
+[ext_resource type="Texture2D" uid="uid://cjgloxxp2fwry" path="res://crossbow.png" id="2_nlemv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_khctk"]
-radius = 389.401
+radius = 270.823
 
 [node name="Crossbow" type="Area2D"]
 collision_mask = 2
@@ -16,9 +16,10 @@ shape = SubResource("CircleShape2D_khctk")
 [node name="WeaponPivot" type="Marker2D" parent="."]
 
 [node name="WeaponImage" type="Sprite2D" parent="WeaponPivot"]
-position = Vector2(101, 0)
-texture = ExtResource("1_gje05")
+position = Vector2(57, -28)
+scale = Vector2(0.145996, 0.145996)
+texture = ExtResource("2_nlemv")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/WeaponImage"]
 unique_name_in_owner = true
-position = Vector2(25, -12)
+position = Vector2(179.602, -2.68063)

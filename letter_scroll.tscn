@@ -14,6 +14,7 @@ offset_right = 793.0
 offset_bottom = 70.0
 color = Color(0.65, 0.5252, 0.442, 1)
 script = ExtResource("2_frq3v")
+sunset = Color(0.09, 0.07404, 0.0558, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="LetterContents"]
 layout_mode = 0
@@ -38,7 +39,7 @@ Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
 You'd have to stop the world just to stop the feeling
 Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
 You'd have to stop the world just to stop the feeling
-I'm cliché, who cares?
+I'm cliche, who cares?
 It's a sexually explicit kind of love affair
 And I cry, it's not fair
 I just need a little lovin', I just need a little air
