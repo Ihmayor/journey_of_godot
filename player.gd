@@ -53,3 +53,7 @@ func _on_letter_scroll_finish_word():
 	const HEAL_RATE = 8.0
 	if health < MAX_HEALTH:
 		health += HEAL_RATE
+	else:
+		health = MAX_HEALTH
+	%ProgressBar.value = health
+	

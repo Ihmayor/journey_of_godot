@@ -30,9 +30,11 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		var input_char = null
 		if unicode > 20 and unicode < 40_000: #Filters out control characters
 			input_char = String.chr(unicode)
+		elif event.keycode == KEY_ENTER:
+			input_char = "\n"
 		else:
 			return
-		
+		input_char = handle_special_characters(input_char, has_shift)
 		if current_letter_index == -1:
 			start_typing(input_char)
 			return
@@ -41,7 +43,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		var next_character = prompt.substr(current_letter_index, 1)
 		
 		if input_char == next_character:
-			if next_character == " ":
+			if next_character == " " or next_character == "/n":
 				finish_word.emit()
 			current_letter_index += 1
 			%LetterContents.set_next_character(current_letter_index)
