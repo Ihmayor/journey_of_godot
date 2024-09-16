@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhrrcwsqhpjs0"]
+
+[ext_resource type="Script" path="res://UI/screen_ui.gd" id="1_pjegy"]
+[ext_resource type="PackedScene" uid="uid://ctoh1mu5r3kyw" path="res://UI/start_screen.tscn" id="1_prgqb"]
+[ext_resource type="PackedScene" uid="uid://ba3i2wtbksp5w" path="res://UI/win_screen.tscn" id="2_31mkh"]
+[ext_resource type="PackedScene" uid="uid://du5dvxdr6bw27" path="res://UI/game_over.tscn" id="2_38nra"]
+[ext_resource type="PackedScene" uid="uid://ii1fd5b7c237" path="res://UI/credits_screen.tscn" id="4_0aa15"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pjegy")
+
+[node name="win_screen" parent="." instance=ExtResource("2_31mkh")]
+unique_name_in_owner = true
+
+[node name="game_over_screen" parent="." instance=ExtResource("2_38nra")]
+unique_name_in_owner = true
+
+[node name="credits_screen" parent="." instance=ExtResource("4_0aa15")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="start_screen" parent="." instance=ExtResource("1_prgqb")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[connection signal="credits_hide" from="credits_screen" to="." method="_on_credits_screen_credits_hide"]
+[connection signal="show_credits" from="start_screen" to="." method="_on_start_screen_show_credits"]
+[connection signal="start_game" from="start_screen" to="." method="_on_start_screen_start_game"]

@@ -14,3 +14,8 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+
+# Specific Copyright files
+music/Good Luck, Babe! (8-bit).mp3
+music/Good Luck, Babe! (8-bit).mp3.import

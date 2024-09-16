@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://78uko0txto53"]
+
+[ext_resource type="Script" path="res://characters/player.gd" id="1_ee33i"]
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_vwupu"]
+[ext_resource type="PackedScene" uid="uid://blrruhk75c6rk" path="res://pistol/pistol.tscn" id="3_fnqnf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jsu2e"]
+radius = 75.06
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3228p"]
+radius = 77.0065
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wcfw"]
+bg_color = Color(0.43, 0.416598, 0.3569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_voyt3"]
+bg_color = Color(0.522457, 0.662451, 1.73271e-06, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+script = ExtResource("1_ee33i")
+
+[node name="HappyBoo" parent="." instance=ExtResource("1_vwupu")]
+unique_name_in_owner = true
+position = Vector2(-1, 37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_jsu2e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="DamageBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+visibility_layer = 2
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+visibility_layer = 3
+position = Vector2(-1, -18)
+shape = SubResource("CircleShape2D_3228p")
+debug_color = Color(0.941358, 8.18223e-06, 0.610951, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -107.0
+offset_top = -161.0
+offset_right = 93.0
+offset_bottom = -135.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1wcfw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_voyt3")
+value = 100.0
+show_percentage = false
+
+[node name="Crossbow" parent="." instance=ExtResource("3_fnqnf")]
+position = Vector2(0, 2)

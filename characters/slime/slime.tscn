@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://characters/slime/slime.gd" id="1_87y5x"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="1_cq7ej"]
-[ext_resource type="Texture2D" uid="uid://bttcejcha64d5" path="res://knight.png" id="3_wywnx"]
-[ext_resource type="Texture2D" uid="uid://c7g533juakk3h" path="res://knight_Hurt.png" id="4_phx8c"]
+[ext_resource type="Texture2D" uid="uid://bttcejcha64d5" path="res://characters/slime/knight.png" id="3_wywnx"]
+[ext_resource type="Texture2D" uid="uid://c7g533juakk3h" path="res://characters/slime/knight_Hurt.png" id="4_phx8c"]
 
 [sub_resource type="Animation" id="Animation_y4lve"]
 length = 0.001

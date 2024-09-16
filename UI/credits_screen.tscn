@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://ii1fd5b7c237"]
+
+[ext_resource type="Script" path="res://UI/credits_screen.gd" id="1_npr3q"]
+[ext_resource type="FontFile" uid="uid://dy4qafg7dht46" path="res://addons/chomsky/Chomsky.otf" id="1_si56y"]
+[ext_resource type="FontFile" uid="uid://bs7qevxqfplxi" path="res://addons/augusta/Augusta.ttf" id="2_fb57u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cx2hv"]
+bg_color = Color(0.941176, 0.839216, 0.709804, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_npr3q")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cx2hv")
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_si56y")
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 400)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[u][b][font size=28]Fonts[/font][/b][/u]
+Chomsky  - [i]Fredrick Brennan (dafont.com)[/i]
+Augusta - [i]Dieter Steffmann (dafont.com)[/i]
+
+[u][b][font size=28]Music/SFX[/font][/b][/u]
+Page Turn - Please Turn Over (PTO) - paper_turn_over.wav by flag2 -- https://freesound.org/s/63318/ -- License: Attribution 4.0
+
+8bittownthemesong.wav by sunsetplanet -- https://freesound.org/s/559067/ -- License: Creative Commons 0
+
+[u][b][font size=28]Misc Help[/font][/b][/u]
+GDQuest
+Laxxy
+Crossbow icons created by Smashicons - Flaticon"
+scroll_active = false
+
+[node name="Button" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/icon_max_width = 0
+theme_override_fonts/font = ExtResource("2_fb57u")
+theme_override_font_sizes/font_size = 40
+text = "Go Back"
+text_overrun_behavior = 2
+autowrap_mode = 2
+
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
