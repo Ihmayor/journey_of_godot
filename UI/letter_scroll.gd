@@ -1,11 +1,11 @@
-extends Node2D
+extends Control
 
 var current_letter_index: int = -1
 var has_capslock : bool = false
 
 signal finish_word
-
 signal finish_letter
+signal line_progress(progress : float)
 
 func start_typing(typed_character: String):
 	var prompt = %LetterContainer.get_prompt()
@@ -35,8 +35,6 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		elif event.keycode == KEY_ENTER:
 			input_char = "\n"
 		else:
-			print(event.as_text())
-			print("invalid code")
 			return
 		input_char = handle_special_characters(input_char, has_shift)
 		if current_letter_index == -1:
@@ -56,6 +54,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 				current_letter_index = -1
 		
 
+func _on_letter_container_line_progress(progress: float):
+	line_progress.emit(progress)
 
 #Hardcoded to specific english keyboard layout.
 #TODO: Would like to find the unicode => string equivalent for special characters

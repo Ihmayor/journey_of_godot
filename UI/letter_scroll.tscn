@@ -5,20 +5,23 @@
 
 [sub_resource type="Theme" id="Theme_ls2om"]
 
-[node name="LetterScroll" type="Node2D"]
-script = ExtResource("1_t21ms")
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control"]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t21ms")
+metadata/_edit_use_anchors_ = true
+
+[node name="LetterContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 60)
+layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
-
-[node name="LetterContainer" type="PanelContainer" parent="Control"]
-unique_name_in_owner = true
-layout_mode = 1
-offset_right = 801.0
-offset_bottom = 59.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_5rifg")
@@ -26,9 +29,10 @@ completed_text_color = Color(0, 0.708404, 0.271487, 1)
 awaiting_text_color = Color(1, 1, 1, 1)
 unfinished_text_color = Color(0.32, 0.32, 0.32, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/LetterContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="LetterContainer"]
 layout_mode = 2
 theme = SubResource("Theme_ls2om")
+theme_override_colors/default_color = Color(0.552956, 0.552956, 0.552956, 1)
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "It's fine, it's cool
@@ -42,9 +46,7 @@ You can kiss a hundred boys in bars
 Shoot another shot, try to stop the feeling
 You can say it's just the way you are
 Make a new excuse, another stupid reason
-Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
-You'd have to stop the world just to stop the feeling
-Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+Good luck, babe, well, good luck, babe
 You'd have to stop the world just to stop the feeling
 I'm cliche, who cares?
 It's a sexually explicit kind of love affair
@@ -59,8 +61,6 @@ You can say it's just the way you are
 Make a new excuse, another stupid reason
 Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
 You'd have to stop the world just to stop the feeling
-Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
-You'd have to stop the world just to stop the feeling
 When you wake up next to him in the middle of the night
 With your head in your hands, you're nothing more than his wife
 And when you think about me, all of those years ago
@@ -71,11 +71,11 @@ You can kiss a hundred boys in bars
 Shoot another shot, try to stop the feeling (well, I told you so)
 You can say it's just the way you are
 Make a new excuse, another stupid reason
-Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+Good luck, babe, well, good luck, babe
 You'd have to stop the world just to stop the feeling
-Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
-You'd have to stop the world just to stop the feeling
-You'd have to stop the world just to stop the feeling
+Good luck, babe, well, good luck, babe 
 You'd have to stop the world just to stop the feeling
 You'd have to stop the world just to stop the feeling"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="line_progress" from="LetterContainer" to="." method="_on_letter_container_line_progress"]

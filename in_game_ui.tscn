@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd38hfl46ymme"]
+
+[ext_resource type="PackedScene" uid="uid://c5uaepyp3nb6" path="res://UI/custom_progress_bar.tscn" id="1_bdyyp"]
+[ext_resource type="Script" path="res://TestScript.gd" id="1_inuum"]
+[ext_resource type="PackedScene" uid="uid://bmho8hv4bwk0t" path="res://UI/letter_scroll.tscn" id="1_yri4u"]
+
+[node name="InGameUITest" type="CanvasLayer"]
+process_mode = 1
+layer = 3
+script = ExtResource("1_inuum")
+
+[node name="CustomProgressBar" parent="." instance=ExtResource("1_bdyyp")]
+unique_name_in_owner = true
+offset_left = 6.0
+offset_top = 162.0
+offset_right = 6.0
+offset_bottom = 162.0
+
+[node name="LetterScroll" parent="." instance=ExtResource("1_yri4u")]
+position = Vector2(2, 2)
+
+[connection signal="line_progress" from="LetterScroll" to="CustomProgressBar" method="_on_letter_scroll_line_progress"]

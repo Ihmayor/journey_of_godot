@@ -27,7 +27,6 @@ func handle_mouse_move():
 	else:
 		%HappyBoo.play_idle_animation()
 	
-
 func check_damage(delta: float):
 	var overlapping_mobs = %DamageBox.get_overlapping_bodies()
 	const DAMAGE_RATE = 5.0
@@ -36,8 +35,6 @@ func check_damage(delta: float):
 		%ProgressBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
-	
-
 
 func _input(event):
 	if event.is_action_pressed("forward"):
@@ -45,7 +42,7 @@ func _input(event):
 	if event.is_action_released("forward"):
 		is_moving = false	
 
-func handle_keyboard_move(event:InputEvent):
+func handle_keyboard_move(_event:InputEvent):
 	#Write movement to do tab mode instead
 	pass
 

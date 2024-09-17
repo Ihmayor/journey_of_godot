@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://lf7dmyvoety4"]
+
+[ext_resource type="PackedScene" uid="uid://bmho8hv4bwk0t" path="res://UI/letter_scroll.tscn" id="1_qs6ri"]
+[ext_resource type="PackedScene" uid="uid://c5uaepyp3nb6" path="res://UI/custom_progress_bar.tscn" id="2_nfghc"]
+
+[node name="TestScrollScene" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LetterScroll" parent="CanvasLayer" instance=ExtResource("1_qs6ri")]
+
+[node name="CustomProgressBar" parent="CanvasLayer" instance=ExtResource("2_nfghc")]
+
+[connection signal="line_progress" from="CanvasLayer/LetterScroll" to="CanvasLayer/CustomProgressBar" method="_on_letter_scroll_line_progress"]

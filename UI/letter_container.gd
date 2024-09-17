@@ -7,6 +7,9 @@ extends PanelContainer
 @onready var prompt = $RichTextLabel
 @onready var prompt_text = prompt.text
 
+signal line_progress(progress:float)
+var curr_line : int = 0
+
 func get_prompt() -> String:
 	return prompt_text
 
@@ -19,6 +22,11 @@ func set_next_character(next_character_index: int):
 	prompt.parse_bbcode(blue_text + green_text + red_text)
 	var line = prompt.get_character_line(next_character_index)
 	prompt.scroll_to_line(line)
+	var line_total = prompt.get_line_count()
+	if line != curr_line:
+		var progress_made = line/(line_total*1.0)
+		line_progress.emit(progress_made)
+	curr_line = line
 	
 func get_bbcode_color_tag(color: Color) -> String:
 	return "[color=#" + color.to_html(false) + "]"

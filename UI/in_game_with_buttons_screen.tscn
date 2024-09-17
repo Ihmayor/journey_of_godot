@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0rxpgpaq25c4"]
+
+[ext_resource type="Script" path="res://UI/in_game_with_buttons_screen.gd" id="1_m255g"]
+[ext_resource type="FontFile" uid="uid://bs7qevxqfplxi" path="res://addons/augusta/Augusta.ttf" id="2_1440u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkcwk"]
+bg_color = Color(0.39, 0.1131, 0.1131, 1)
+
+[node name="InGameWithButtons" type="CanvasLayer"]
+script = ExtResource("1_m255g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.494118)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("2_1440u")
+theme_override_font_sizes/font_size = 100
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="CheckButton" type="CheckButton" parent="ColorRect/CenterContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1440u")
+theme_override_font_sizes/font_size = 30
+text = "Music Off"
+alignment = 1
+
+[node name="Close" type="Button" parent="ColorRect/CenterContainer/VBoxContainer/VBoxContainer2"]
+process_mode = 3
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1440u")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qkcwk")
+text = "Close"
+
+[node name="Button" type="Button" parent="ColorRect/CenterContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+process_mode = 3
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1440u")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qkcwk")
+text = "Restart"
+
+[connection signal="toggled" from="ColorRect/CenterContainer/VBoxContainer/VBoxContainer2/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/VBoxContainer2/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]

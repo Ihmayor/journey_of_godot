@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ba3i2wtbksp5w"]
+[gd_scene format=3 uid="uid://bhctdm5xt1cim"]
 
 [node name="WinScreen" type="CanvasLayer"]
 visible = false
