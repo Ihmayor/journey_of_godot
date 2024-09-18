@@ -19,9 +19,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if event.keycode == KEY_CAPSLOCK:
 			has_capslock = !has_capslock
 			return
-		if event.keycode == KEY_SHIFT:
-			return
-		var unicode = event.keycode
+		
+		var unicode = PackedByteArray([event.get_keycode_with_modifiers()]).get_string_from_utf8()
 		var has_shift = event.shift_pressed
 		
 		if not has_shift && not has_capslock:
@@ -52,7 +51,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			if current_letter_index == prompt.length():
 				finish_letter.emit()
 				current_letter_index = -1
-		
+		else:
+			%LetterContainer.set_current_character(current_letter_index)
 
 func _on_letter_container_line_progress(progress: float):
 	line_progress.emit(progress)

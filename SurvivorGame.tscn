@@ -522,11 +522,9 @@ theme_override_fonts/font = ExtResource("5_5e7p8")
 theme_override_font_sizes/font_size = 55
 text = "By Royal Decree, 
 You are formally invited to
-Her Royal Highness'
-Wedding on ..... blah blah
-blah blah blah blah
-blah blah blah blah
-blah blah blah blah"
+HER Royal Highness'
+Wedding on ... blah blah
+blah blah"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 

@@ -28,6 +28,7 @@ script = ExtResource("2_5rifg")
 completed_text_color = Color(0, 0.708404, 0.271487, 1)
 awaiting_text_color = Color(1, 1, 1, 1)
 unfinished_text_color = Color(0.32, 0.32, 0.32, 1)
+incorrect_text_color = Color(0.75, 0.165, 0.165, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="LetterContainer"]
 layout_mode = 2
@@ -35,47 +36,80 @@ theme = SubResource("Theme_ls2om")
 theme_override_colors/default_color = Color(0.552956, 0.552956, 0.552956, 1)
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "It's fine, it's cool
-You can say that we are nothing, but you know the truth
-And guess I'm the fool
-With her arms out like an angel through the car sunroof
+text = "it's fine, it's cool
+you can say that we are nothing
+but you know the truth
+and guess I'm the fool
+with her arms out like an angel
+through the car sunroof
 I don't wanna call it off
-But you don't wanna call it love
-You only wanna be the one that I call \"baby\"
-You can kiss a hundred boys in bars
-Shoot another shot, try to stop the feeling
-You can say it's just the way you are
-Make a new excuse, another stupid reason
-Good luck, babe, well, good luck, babe
-You'd have to stop the world just to stop the feeling
-I'm cliche, who cares?
-It's a sexually explicit kind of love affair
-And I cry, it's not fair
-I just need a little lovin', I just need a little air
-Think I'm gonna call it off
-Even if you call it love
-I just wanna love someone who calls me \"baby\"
-You can kiss a hundred boys in bars
-Shoot another shot, try to stop the feeling
-You can say it's just the way you are
-Make a new excuse, another stupid reason
-Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
-You'd have to stop the world just to stop the feeling
-When you wake up next to him in the middle of the night
-With your head in your hands, you're nothing more than his wife
-And when you think about me, all of those years ago
-You're standing face to face with \"I told you so\"
-You know I hate to say, \"I told you so\"
-You know I hate to say, but, I told you so
-You can kiss a hundred boys in bars
-Shoot another shot, try to stop the feeling (well, I told you so)
-You can say it's just the way you are
-Make a new excuse, another stupid reason
-Good luck, babe, well, good luck, babe
-You'd have to stop the world just to stop the feeling
-Good luck, babe, well, good luck, babe 
-You'd have to stop the world just to stop the feeling
-You'd have to stop the world just to stop the feeling"
+but you don't wanna call it love
+you only wanna be the one that
+I call \"baby\"
+you can kiss a hundred
+boys in bars
+shoot another shot
+try to stop the feeling
+you can say it's just the way you are
+make a new excuse
+another stupid reason
+Good luck, babe,
+well, good luck, babe
+You'd have to stop the world
+just to stop the feeling
+i'm cliche, who cares?
+it's a sexually explicit
+kind of love affair
+and I cry, it's not fair
+I just need a little lovin'
+I just need a little air
+think I'm gonna call it off
+even if you call it love
+I just wanna love
+someone who calls me \"baby\"
+you can kiss a hundred
+boys in bars
+shoot another shot
+try to stop the feeling
+you can say 
+it's just the way you are
+make a new excuse
+another stupid reason
+Good luck, babe
+(well, good luck)
+well, good luck, babe
+(well, good luck)
+you'd have to stop the world
+just to stop the feeling
+when you wake up next to him
+in the middle of the night
+with your head in your hands
+you're nothing more than his wife
+and when you think about me
+all of those years ago
+you're standing
+face to face with
+\"I told you so\"
+you know I hate to say, \"I told you so\"
+you know I hate to say, but, I told you so
+you can kiss a hundred
+boys in bars
+shoot another shot
+try to stop the feeling
+(well, i told you so)
+you can say it's just the way you are
+make a new excuse
+another stupid reason
+good luck, babe, well,
+good luck, babe
+you'd have to stop the world
+just to stop the feeling
+good luck, babe, well,
+good luck, babe
+you'd have to stop the world
+just to stop the feeling
+you'd have to stop the world
+just to stop the feeling"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="line_progress" from="LetterContainer" to="." method="_on_letter_container_line_progress"]

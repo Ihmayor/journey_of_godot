@@ -16,13 +16,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pjegy")
 
-[node name="PauseScreen" parent="." instance=ExtResource("2_wksjn")]
-unique_name_in_owner = true
-process_mode = 3
-visible = false
-toggle_name = "Music"
-button_name = "Restart"
-
 [node name="GameOverScreen" parent="." instance=ExtResource("2_38nra")]
 unique_name_in_owner = true
 process_mode = 3
@@ -34,6 +27,13 @@ unique_name_in_owner = true
 process_mode = 3
 visible = false
 screen_message = "CONGRATZ! YOU WON!"
+
+[node name="PauseScreen" parent="." instance=ExtResource("2_wksjn")]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+toggle_name = "Music"
+button_name = "Restart"
 
 [node name="CreditsScreen" parent="." instance=ExtResource("4_0aa15")]
 unique_name_in_owner = true

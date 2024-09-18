@@ -18,10 +18,14 @@ func show_start():
 	%StartScreen.visible = true
 	
 func show_win():
+	if %WinScreen.visible:
+		return
 	hide_all()
 	%WinScreen.visible = true
 	
 func show_game_over():
+	if %GameOverScreen.visible:
+		return
 	hide_all()
 	%GameOverScreen.visible = true
 
