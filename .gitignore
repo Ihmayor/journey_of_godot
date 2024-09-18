@@ -20,6 +20,6 @@ mono_crash.*.json
 music/Good Luck, Babe! (8-bit).mp3
 music/Good Luck, Babe! (8-bit).mp3.import
 HTML_BUILD/*
-HTML_BUILD.zip
+HTML_BUILD*.zip
 *.zip
 Builds/*

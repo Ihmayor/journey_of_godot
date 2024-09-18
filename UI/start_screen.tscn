@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctoh1mu5r3kyw"]
+[gd_scene load_steps=9 format=3 uid="uid://ctoh1mu5r3kyw"]
 
 [ext_resource type="Script" path="res://UI/start_screen.gd" id="1_8u2yv"]
 [ext_resource type="Texture2D" uid="uid://d1yex3y5dc511" path="res://UI/flower_border.png" id="1_xycbx"]
@@ -13,6 +13,12 @@ default_font = ExtResource("2_pa3sq")
 [sub_resource type="Theme" id="Theme_fy5l0"]
 default_font = ExtResource("3_1pwsk")
 default_font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd10w"]
+bg_color = Color(0.388235, 0.113725, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0jtk"]
+bg_color = Color(0.388235, 0.113725, 0.113725, 1)
 
 [node name="Start_Screen" type="Control"]
 layout_mode = 3
@@ -104,6 +110,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_fy5l0")
 theme_override_constants/h_separation = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_sd10w")
 text = "Start"
 
 [node name="Credits" type="Button" parent="NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer"]
@@ -111,6 +118,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_fy5l0")
 theme_override_constants/h_separation = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_h0jtk")
 text = "Credits
 "
 

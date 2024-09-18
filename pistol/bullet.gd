@@ -14,6 +14,8 @@ func _physics_process(delta: float):
 		queue_free()
 
 func _on_body_entered(body: Node2D):
+	if body.name.contains("Player"):
+		return
 	queue_free()#waits one frame to do so
 	if body.has_method("take_damage"):
 		body.take_damage()

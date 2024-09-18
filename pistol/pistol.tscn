@@ -7,10 +7,12 @@
 radius = 270.823
 
 [node name="Crossbow" type="Area2D"]
+collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_4kf7o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 17
 shape = SubResource("CircleShape2D_khctk")
 
 [node name="WeaponPivot" type="Marker2D" parent="."]

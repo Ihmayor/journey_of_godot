@@ -29,9 +29,11 @@ script = ExtResource("1_ee33i")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_vwupu")]
 unique_name_in_owner = true
+y_sort_enabled = false
 position = Vector2(-1, 37)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_jsu2e")
 
@@ -50,8 +52,14 @@ position = Vector2(-1, -18)
 shape = SubResource("CircleShape2D_3228p")
 debug_color = Color(0.941358, 8.18223e-06, 0.610951, 0.42)
 
+[node name="Crossbow" parent="." instance=ExtResource("3_fnqnf")]
+position = Vector2(0, 2)
+collision_layer = 1
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
+z_index = 2
+y_sort_enabled = true
 offset_left = -107.0
 offset_top = -161.0
 offset_right = 93.0
@@ -60,6 +68,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_1wcfw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_voyt3")
 value = 100.0
 show_percentage = false
-
-[node name="Crossbow" parent="." instance=ExtResource("3_fnqnf")]
-position = Vector2(0, 2)

@@ -224,7 +224,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("%PlayerCharacter:visible")
+tracks/17/path = NodePath("../PlayerCharacter:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -444,7 +444,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("%PlayerCharacter:visible")
+tracks/17/path = NodePath("../PlayerCharacter:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -597,11 +597,6 @@ playback_type = 1
 script = ExtResource("6_hp8mh")
 is_copyright = false
 
-[node name="MobTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-process_mode = 1
-wait_time = 1.277
-
 [node name="Environment" type="Node" parent="."]
 
 [node name="StaticBody2D" parent="Environment" instance=ExtResource("3_gk28e")]
@@ -648,6 +643,11 @@ position = Vector2(-535, -264)
 
 [node name="StaticBody2D11" parent="Environment" instance=ExtResource("3_gk28e")]
 position = Vector2(-217, -314)
+
+[node name="MobTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_mode = 1
+wait_time = 1.277
 
 [connection signal="game_over" from="." to="ScreenUI/ScreenControl" method="_on_game_game_over"]
 [connection signal="game_start" from="." to="PlayerCharacter/PlayerAudio" method="_on_game_game_start"]
