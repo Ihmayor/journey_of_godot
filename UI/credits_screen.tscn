@@ -43,7 +43,7 @@ text = "Credits"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(700, 480)
+custom_minimum_size = Vector2(700, 540)
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
@@ -52,9 +52,13 @@ Chomsky  - [i]Fredrick Brennan (dafont.com)[/i]
 Augusta - [i]Dieter Steffmann (dafont.com)[/i]
 
 [u][b][font size=26]Music/SFX[/font][/b][/u]
-Page Turn - Please Turn Over (PTO) - paper_turn_over.wav by flag2 -- https://freesound.org/s/63318/ -- License: Attribution 4.0
+-- License: Attribution 4.0
+Page Turn - Please Turn Over (PTO) - paper_turn_over.wav by flag2 -- https://freesound.org/s/63318/ 
 
-8bittownthemesong.wav by sunsetplanet -- https://freesound.org/s/559067/ -- License: Creative Commons 0
+ -- License: Creative Commons 0
+Button_Hover (mp3).mp3 by deadsillyrabbit -- https://freesound.org/s/251390/
+8bittownthemesong.wav by sunsetplanet -- https://freesound.org/s/559067/
+Switch - 8.wav by SpaceJoe -- https://freesound.org/s/484072/ 
 
 [u][b][font size=26]Misc Help[/font][/b][/u]
 GDQuest

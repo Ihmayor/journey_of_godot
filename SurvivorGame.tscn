@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://x01gco3o4wph"]
+[gd_scene load_steps=19 format=3 uid="uid://x01gco3o4wph"]
 
 [ext_resource type="Script" path="res://survivor_game.gd" id="1_ldg0g"]
 [ext_resource type="PackedScene" uid="uid://78uko0txto53" path="res://characters/player.tscn" id="1_nhbjr"]
+[ext_resource type="PackedScene" uid="uid://g5mrvmkhln6g" path="res://UI/ui_sounds.tscn" id="2_fbq83"]
 [ext_resource type="PackedScene" uid="uid://bmho8hv4bwk0t" path="res://UI/letter_scroll.tscn" id="2_rcax5"]
 [ext_resource type="PackedScene" uid="uid://c5uaepyp3nb6" path="res://UI/custom_progress_bar.tscn" id="3_f8che"]
 [ext_resource type="PackedScene" uid="uid://6b43w5bxed88" path="res://trees/PineTree.tscn" id="3_gk28e"]
@@ -512,7 +513,7 @@ anchor_left = -0.0191693
 anchor_top = -0.919144
 anchor_right = -0.0191693
 anchor_bottom = -0.919144
-offset_left = 88.0895
+offset_left = 88.0894
 offset_top = 1679.0
 offset_right = 726.089
 offset_bottom = 2203.0
@@ -556,6 +557,9 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_g8chr")
 }
+
+[node name="UISounds" parent="." instance=ExtResource("2_fbq83")]
+root_path = NodePath("../ScreenUI")
 
 [node name="BackgroundColor" type="CanvasLayer" parent="."]
 layer = -30

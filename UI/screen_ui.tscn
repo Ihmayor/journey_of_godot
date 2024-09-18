@@ -26,11 +26,13 @@ button_name = "Restart"
 [node name="GameOverScreen" parent="." instance=ExtResource("2_38nra")]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 screen_message = "GAME OVER"
 
 [node name="WinScreen" parent="." instance=ExtResource("2_38nra")]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 screen_message = "CONGRATZ! YOU WON!"
 
 [node name="CreditsScreen" parent="." instance=ExtResource("4_0aa15")]

@@ -19,5 +19,7 @@ mono_crash.*.json
 # Specific Copyright files
 music/Good Luck, Babe! (8-bit).mp3
 music/Good Luck, Babe! (8-bit).mp3.import
- HTML_BUILD/*
- Builds/*
+HTML_BUILD/*
+HTML_BUILD.zip
+*.zip
+Builds/*

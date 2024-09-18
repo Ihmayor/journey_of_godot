@@ -38,12 +38,20 @@ func _on_screen_ui_start_button():
 func start_game_loop():
 	%MobTimer.start()
 	%InGameUI.visible = true
+	get_tree().paused = false
 	game_start.emit()
 	
 func pause_game():
-	if %InGameUI.visible:
+	if %CutScene.visible:
+		if %CutSceneAnimationPlayer.is_playing():
+			print("stop")
+			%CutSceneAnimationPlayer.pause()
+		else:
+			print("resume")
+			%CutSceneAnimationPlayer.play()
+	elif %InGameUI.visible:
+		print("what")
 		get_tree().paused = !get_tree().paused
-
 
 func _on_intro_scene_complete(_anim_name: StringName):
 	start_game_loop()
