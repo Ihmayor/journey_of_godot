@@ -1,9 +1,9 @@
 extends "res://UI/in_game_screen.gd"
+#Extends in game screen with additional buttons
 
 signal toggle_button_pressed(toggled_on: bool)
 signal button_pressed
 signal close_pressed
-
 
 @export var toggle_name : String 
 @export var button_name : String 

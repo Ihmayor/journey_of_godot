@@ -38,6 +38,11 @@ position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_jsu2e")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.33
+drag_vertical_offset = 0.32
 
 [node name="DamageBox" type="Area2D" parent="."]
 unique_name_in_owner = true

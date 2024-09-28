@@ -1,3 +1,4 @@
+#Auto-Progress progress bar for debugging purposes
 extends CanvasLayer
 var progress = 0
 

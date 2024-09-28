@@ -1,9 +1,9 @@
+#Handle all Screen Menu Elements
 extends Control
 
 signal start_button_pressed
 signal pause_button_pressed
 signal toggle_music(is_on:bool)
-
 
 func _input(event):
 	if !%StartScreen.visible and event.is_action_pressed("pause"):

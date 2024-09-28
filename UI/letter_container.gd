@@ -1,3 +1,4 @@
+#Handles a scrollable text label that changes format and auto-scrolls
 extends PanelContainer
 
 @export var completed_text_color = Color("#de6f33")

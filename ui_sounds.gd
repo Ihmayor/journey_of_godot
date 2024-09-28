@@ -1,3 +1,4 @@
+#Handles all UI SFX
 extends Node
 
 @export var root_path : NodePath
@@ -18,6 +19,7 @@ func _ready():
 		add_child(sounds[i])
 	install_sounds(get_node(root_path))
 
+#Register sounds for every relevant signal for every found button
 func install_sounds(node :Node):
 	for i in node.get_children():
 		if i is Button:

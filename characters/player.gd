@@ -11,8 +11,14 @@ signal health_depleted
 func _physics_process(delta):
 	check_damage(delta)
 	handle_mouse_move()
+
+func _input(event):
+	if event.is_action_pressed("forward"):
+		is_moving = true	
+	if event.is_action_released("forward"):
+		is_moving = false	
 		
-	
+#Move player based on mouse position
 func handle_mouse_move():
 	if not is_moving: 
 		%HappyBoo.play_idle_animation()
@@ -26,7 +32,8 @@ func handle_mouse_move():
 		%HappyBoo.play_walk_animation()
 	else:
 		%HappyBoo.play_idle_animation()
-	
+
+#Handles Player Damage and updates health bar
 func check_damage(delta: float):
 	var overlapping_mobs = %DamageBox.get_overlapping_bodies()
 	const DAMAGE_RATE = 5.0
@@ -36,16 +43,13 @@ func check_damage(delta: float):
 		if health <= 0.0:
 			health_depleted.emit()
 
-func _input(event):
-	if event.is_action_pressed("forward"):
-		is_moving = true	
-	if event.is_action_released("forward"):
-		is_moving = false	
 
 func handle_keyboard_move(_event:InputEvent):
-	#Write movement to do tab mode instead
+	#Write movement to do this instead of mouse movement
+	#Triggered by tab
 	pass
 
+#Heal player based on succesful word completion
 func _on_letter_scroll_finish_word():
 	const HEAL_RATE = 7.0
 	if health < MAX_HEALTH:

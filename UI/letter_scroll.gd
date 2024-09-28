@@ -1,3 +1,6 @@
+#Handles Player Input for auto-scrolling text-element
+#Only moves forward if the player types correctly
+
 extends Control
 
 var current_letter_index: int = -1
